@@ -52,20 +52,17 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
                 lightValue < 20f -> { // Muy oscuro
                     rootView.setBackgroundColor(Color.BLACK)
                     textView.setTextColor(Color.WHITE)
-                    textView.text = "A dormir que mañana hay escuela"
                     loadGif(R.raw.buenasnoches)
                 }
                 lightValue < 100f -> { // Poca luz
                     val orangeColor = Color.rgb(255, 165, 0)
-                    rootView.setBackgroundColor(orangeColor)
+                    rootView.setBackgroundColor(Color.WHITE)
                     textView.setTextColor(Color.BLACK)
-                    textView.text = "Chambeando"
                     loadGif(R.raw.buenastardes)
                 }
                 else -> { // Mucha luz
                     rootView.setBackgroundColor(Color.WHITE)
                     textView.setTextColor(Color.BLACK)
-                    textView.text = "Empezando el dia sin ánimo"
                     loadGif(R.raw.buenosdias)
                 }
             }
